@@ -8,3 +8,6 @@ class Bets(models.Model):
     payout = models.FloatField()
     win = models.BooleanField(default=False)
     date = models.DateTimeField()
+    
+    def __str__(self) -> str:
+        return f"{self.name}"
