@@ -1,11 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Details</title>
-</head>
-<body>
+{% extends "master.html" %}
+
+{% block title %}
+  Bet details 
+{% endblock %}
+
+{% block content %}
     <h1>{{ bet.name }}</h1>
 
     <p>Bet Amount: {{bet.bet_amount}}</p>
@@ -13,5 +12,5 @@
     <p>Win Status: {{bet.win}}</p>
 
     <p>Back to <a href="/bets">Bets</a></p>
-</body>
-</html>
+
+{% endblock %}

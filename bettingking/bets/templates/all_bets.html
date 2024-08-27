@@ -1,17 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Bets</title>
-</head>
-<body>
-    <h1>Bets</h1>
+{% extends "master.html" %}
+{% block title %}
+    All Bets
+{% endblock %}
 
+{% block content %}
+
+    <p><a href="/">HOME</a></p>
+
+    <h1>Bets</h1>
+    
     <ul>
         {% for bet in allbets %}
             <li><a href="details/{{bet.id}}">{{ bet.name }} {{bet.bet_amount}} {{bet.payout}} {{bet.win}}</a></li>
         {% endfor %}
     </ul>
-</body>
-</html>
+{% endblock %}
